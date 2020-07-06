@@ -20,7 +20,7 @@ from telemetry.telemetry_logger import TelemetryLogger
 
 
 class SocketTelemetryServer(TelemetryServer):
-    def __init__(self, host="0.0.0.0", port=1860):
+    def __init__(self, host="0.0.0.0", port=1860, deffered_buffer_len=1000):
         super(SocketTelemetryServer, self).__init__()
         self.debug = True
         self.host = host
@@ -28,7 +28,7 @@ class SocketTelemetryServer(TelemetryServer):
         self._server_socket = None
         self._client_sockets = {}
         self._deferred = None
-        self._deferred_length = 40000
+        self._deferred_length = deffered_buffer_len
         self._deferred_thread = None
         self._deferred_event = None
         self._deferred_exception_callback = None

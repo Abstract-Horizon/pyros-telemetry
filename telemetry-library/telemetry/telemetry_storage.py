@@ -18,10 +18,12 @@ import uuid
 
 
 def _find_time_index(values, the_time, starting_from=0):
-    for i in range(starting_from, len(values)):
-        if values[i][0] >= the_time:
-            return i
-
+    try:
+        for i in range(starting_from, len(values)):
+            if values[i][0] >= the_time:
+                return i
+    except IndexError:
+        pass
     return len(values)
 
 
