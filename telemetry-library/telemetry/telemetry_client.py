@@ -96,6 +96,8 @@ class TelemetryClient:
     def retrieve(self, stream, from_timestamp, to_timestmap, callback):
         pass
 
+    def stop(self) -> None:
+        pass
 
 class PubSubTelemetryClient(TelemetryClient):
     def __init__(self, topic=None, pub_method=None, sub_method=None):

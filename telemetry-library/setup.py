@@ -21,14 +21,14 @@ with open("README.md", "r") as fh:
 
 setup(
     name="pyros-telemetry",
-    version="1.0.0",
+    version="1.0.1",
     author="Daniel Sendula",
     description="Telemetry package aimed for PyROS",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Abstract-Horizon/pyros-telemetry",
     zip_safe=False, # Doesn't create an egg - easier to debug and hack on
-    packages=['telemetry', 'telemetry_server'],
+    packages=['telemetry'],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: Apache Software License",
